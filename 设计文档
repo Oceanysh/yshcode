@@ -1,0 +1,110 @@
+
+
+
+题目 基于Java的动漫公司信息查询系统的设计与实现
+
+
+
+ 系统需求分析
+    通过调查市场所得出来的调查结果了解，得出以下所需要的功能:
+本系统分为前端和后端两部分，用户需求分析如下：
+前台模块
+
+1．用户注册：用户注册要填写姓名（姓名即为用户的账号），密码等信息，然后系统来检测填写内容的合法性。
+2．用户登录：用户可以根据自己注册的填写正确的账号密码登录，向系统后端数据库发送请求，然后判断账号密码的正确性。
+3．信息录入：用户进入系统后可以随意浏览信息，但要需要在权限范围内录入信息。
+4．信息查询：用户在搜索栏输入信息关键字进行搜索。
+5．个人信息管理：用户可以进入信息管理界面，对自己的基本信息进行修改查看。
+后台模块
+
+1．后台登陆模块：管理员可选择权限来登陆后台
+2．数据管理：管理员对数据进行审核，添加数据，删除数据以及修改数据。
+3．用户管理：管理员对用户进行删除，修改，增加，查询功能。
+4．管理员权限管理：不同的管理员有各自不同的分工，可以添加管理员，也可以对其他管理员进行控制。
+
+
+
+（用户信息表）
+
+序号	名称	别名	类型	长度（字符）
+1	User_id	用户编号	Int	4
+2	User_name	用户名	Varchar	10
+3	User_pw	用户密码	Varchar	20
+4	User_realname	用户真名	Varchar	4
+5	User_tel	用户电话	Varchar	15
+6	User_email	用户邮箱	Varchar	20
+
+
+
+（管理员信息表）
+编号	名称	别名	类型	长度（字符）
+1	Userid	管理员ID	Int	4
+2	Username	管理员名称	Varchar	10
+3	Userpw	管理员密码	Varchar	20
+
+
+
+（部门信息表）
+编号	名称	别名	类型	长度（字符）
+1	department_id	部门名称	Varchar	4
+2	department_business	部门业务	Varchar	20
+3	Department_manager	部门经理	Varchar	4
+
+
+
+（公司信息表）
+编号	名称	别名	类型	长度（字符）
+1	Firm_id	公司名称	Varchar	20
+2	Firm_brief	公司简介	Varchar	50
+3	Firm_ow	公司官网	Varchar	30
+4	Firm_address	公司地址	Varchar	30
+5	Firm_partner	合作伙伴	Varchar	50
+6	Firm_prize	所获奖项	Varchar	50
+
+
+（媒体信息表）
+编号	名称	别名	类型	长度（字符）
+1	Media_id	媒体名称	Varchar	20
+2	Media_ category	媒体类别	Varchar	30
+3	Media_country	所属国家	Varchar	10
+4	Media_brief	平台简介	Varchar	50
+5	Media_coverage	覆盖范围	Varchar	30
+
+
+
+（动漫节信息表）
+编号	名称	别名	类型	长度（字符）
+1	Festival_id	节日名称	Varchar	20
+2	Festival_country	举办国家	Varchar	10
+3	Festival_brief	节日简介	Varchar	50
+4	Festival_time	举办时间	Varchar	10
+
+
+
+（动漫作品信息表）
+编号	名称	别名	类型	长度（字符）
+1	Anime_id	作品名称	Varchar	20
+2	Anime_country	制作国家	Varchar	10
+3	Anime_firm	制作公司	Varchar	20
+4	Anime_publisher	发行公司	Varchar	20
+5	Anime_displatform	发行平台	Varchar	20
+
+
+（公告信息表）
+编号	名称	别名	类型	长度（字符）
+1	Gonggao_id	公告编号	Int	4
+2	Gonggao_title	公告标题	Varchar	50
+3	Gonggao_content	公告内容	Varchar	150
+4	Gonggao_time	创建时间	Varchar	20
+5	Gonggao_person	公告发布人	Varchar	20
+
+
+
+
+
+
+
+
+
+
+
